@@ -1,0 +1,21 @@
+{
+  "errors": [],
+  "demoState": {
+    "sector": "03 / SKYBRIDGE",
+    "near": "9",
+    "crashed": false
+  },
+  "checks": [
+    "desktop garage",
+    "start",
+    "steer",
+    "pause/resume",
+    "boost",
+    "natural collision",
+    "retry",
+    "showcase",
+    "mobile garage",
+    "mobile controls",
+    "context-loss fallback"
+  ]
+}

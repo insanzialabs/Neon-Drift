@@ -1,0 +1,17 @@
+{
+  "errors": [],
+  "source": "Formula 1 — Hans Zimmer (OST F1 Movie) ｜ Live by Imperial Orchestra [YxzIwX5g_eY].webm",
+  "checks": [
+    "no music before gesture",
+    "arbitrary key, P, Space and arrow start without extra game actions",
+    "background click and mobile tap start",
+    "settings remain usable and garage does not auto-restart",
+    "supplied WebM decoded and playback time advanced",
+    "pause freezes playback",
+    "resume continues position",
+    "music off/on",
+    "garage stops music",
+    "new run restarts music"
+  ],
+  "audibleOutput": "Not assessed in headless Chrome"
+}
