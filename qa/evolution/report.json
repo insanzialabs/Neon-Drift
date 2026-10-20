@@ -1,0 +1,20 @@
+{
+  "game": "games/neon-drift",
+  "errors": [],
+  "checks": [
+    "format persists without accidental start",
+    "locked cosmetic options",
+    "320/390 portrait and short landscape menus fit",
+    "60-second showcase challenge finishes",
+    "showcase results explicitly labelled and no records/rewards saved",
+    "R retry after success",
+    "new skill demonstrated with normal simulation",
+    "mobile skill HUD visible and controls do not overlap",
+    "prior-save fixture displays record and unlocks a cosmetic that persists"
+  ],
+  "skillSeen": true,
+  "limits": [
+    "earned medal scoring and badge rules verified by unit tests; browser finish uses labelled showcase",
+    "not a physical phone or speaker test"
+  ]
+}

@@ -10,7 +10,9 @@
     "lint": "eslint src",
     "test": "node --import tsx --test tests/*.test.ts",
     "test:browser": "node tests/browser.mjs",
-    "test:audio": "node tests/audio.mjs"
+    "test:audio": "node tests/audio.mjs",
+    "test:upgrade": "node tests/upgrade-browser.mjs",
+    "test:evolution": "node --import tsx tests/evolution-browser.mjs"
   },
   "dependencies": {
     "three": "^0.180.0"

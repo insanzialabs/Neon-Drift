@@ -776,3 +776,455 @@ h2 {
     margin-top: 12px;
   }
 }
+.pace-select {
+  display: flex;
+  gap: 8px;
+  margin: 0 0 16px;
+}
+.pace-select button {
+  padding: 10px 14px;
+  min-width: 150px;
+  background: #101c31a0;
+  border: 1px solid #4c6978;
+  color: #d4e5ee;
+  font: 9px monospace;
+  letter-spacing: 1px;
+  text-align: left;
+}
+.pace-select small {
+  display: block;
+  color: #b2c3d2;
+  font: 10px Arial;
+  margin-top: 5px;
+  letter-spacing: 0;
+}
+.pace-select [aria-pressed="true"] {
+  color: #96f5dc;
+  border-color: #96f5dc;
+  background: #96f5dc15;
+}
+#driver-rank {
+  position: fixed;
+  top: 183px;
+  left: 4%;
+  font: 9px monospace;
+  letter-spacing: 2px;
+  color: #96f5dc;
+}
+#objective {
+  position: fixed;
+  bottom: 115px;
+  left: 50%;
+  transform: translateX(-50%);
+  font: 9px monospace;
+  letter-spacing: 1px;
+  color: #e8cf9a;
+  max-width: 300px;
+  text-align: center;
+}
+.armor-indicator {
+  position: fixed;
+  top: 170px;
+  right: 4%;
+  font: 8px monospace;
+  letter-spacing: 1px;
+  color: #ffd58d;
+}
+.overlay-card {
+  max-height: 86dvh;
+  overflow: auto;
+}
+dialog {
+  max-width: 600px;
+  width: 90%;
+  max-height: 85dvh;
+  overflow: auto;
+  background: #102032;
+  color: #edf4f5;
+  border: 1px solid #6c8490;
+  padding: 30px;
+}
+dialog::backdrop {
+  background: #040916dc;
+}
+dialog h2 {
+  font-size: 30px;
+  color: #96f5dc;
+}
+dialog h3 {
+  font-size: 16px;
+  margin-top: 24px;
+}
+dialog p {
+  font-size: 14px;
+  line-height: 1.7;
+  color: #bbcedd;
+}
+dialog a {
+  color: #96f5dc;
+  text-decoration: underline;
+}
+#close-guide {
+  padding: 15px 20px;
+  background: #96f5dc;
+  color: #102032;
+  margin-top: 12px;
+}
+@media (max-width: 700px) {
+  .panel {
+    top: 14%;
+  }
+  h1 {
+    font-size: 70px;
+    margin: 20px 0;
+  }
+  .intro {
+    margin: 17px 0;
+    font-size: 11px;
+  }
+  .actions {
+    flex-direction: row;
+    align-items: stretch;
+    gap: 8px;
+  }
+  .actions .primary {
+    font-size: 9px;
+    padding: 13px 14px;
+    min-height: 47px;
+  }
+  .actions .primary span {
+    padding-left: 10px;
+    font-size: 15px;
+  }
+  .actions .demo {
+    font-size: 7px;
+    padding: 12px;
+  }
+  .pace-select {
+    gap: 7px;
+    margin-bottom: 12px;
+  }
+  .pace-select button {
+    min-width: 0;
+    flex: 1;
+    font-size: 8px;
+    padding: 9px 11px;
+  }
+  .pace-select small {
+    font-size: 9px;
+  }
+  .start-hint {
+    font-size: 7px;
+    letter-spacing: 0.5px;
+  }
+  .menu-meta {
+    margin-top: 12px;
+    gap: 12px;
+  }
+  .status {
+    font-size: 6px;
+  }
+  #driver-rank {
+    top: 160px;
+    left: 6%;
+    font-size: 8px;
+  }
+  #objective {
+    bottom: 244px;
+    left: 6%;
+    right: 6%;
+    transform: none;
+    text-align: left;
+    font-size: 8px;
+    max-width: 240px;
+  }
+  .armor-indicator {
+    top: 140px;
+    right: 6%;
+    max-width: 140px;
+    text-align: right;
+    font-size: 7px;
+    line-height: 1.6;
+  }
+  .tools button {
+    font-size: 7px;
+    padding: 7px 6px;
+  }
+  .brand b {
+    display: none;
+  }
+  .garage-label {
+    bottom: 12%;
+    right: 6%;
+  }
+  .garage-label div > span {
+    font-size: 7px;
+  }
+}
+@media (max-height: 720px) {
+  .panel {
+    top: 14%;
+  }
+  h1 {
+    font-size: clamp(52px, 7vw, 90px);
+    margin: 16px 0;
+  }
+  .intro {
+    margin: 13px 0;
+  }
+  .menu-meta {
+    margin-top: 10px;
+  }
+  .pace-select {
+    margin-bottom: 12px;
+  }
+  .start-hint {
+    margin-top: 10px;
+  }
+  .garage-label {
+    bottom: 13%;
+  }
+}
+@media (pointer: coarse) and (min-width: 701px) {
+  #touch {
+    position: fixed;
+    bottom: 65px;
+    left: 35%;
+    right: 35%;
+    display: flex;
+    justify-content: space-between;
+  }
+  #touch button {
+    width: 60px;
+    height: 55px;
+    background: #11263dd9;
+    border: 1px solid #84b9c5;
+    font-size: 30px;
+    touch-action: none;
+  }
+  #touch #boost {
+    font: 10px monospace;
+    color: #96f5dc;
+    width: 80px;
+  }
+}
+@media (max-height: 520px) and (min-width: 650px) {
+  .panel {
+    top: 78px;
+    left: 6%;
+    width: 88%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px 30px;
+  }
+  .panel > .eyebrow {
+    grid-column: 1/-1;
+    font-size: 8px;
+  }
+  .panel h1 {
+    grid-column: 1;
+    grid-row: 2/6;
+    font-size: 70px;
+    margin: 10px 0;
+  }
+  .panel .subtitle,
+  .panel .intro {
+    display: none;
+  }
+  .panel .pace-select,
+  .panel .actions,
+  .panel .start-hint,
+  .panel .menu-meta {
+    grid-column: 2;
+    margin: 0;
+  }
+  .panel .pace-select button {
+    min-width: 0;
+    flex: 1;
+    padding: 9px;
+  }
+  .panel .primary {
+    padding: 12px;
+    min-height: 45px;
+    font-size: 9px;
+  }
+  .panel .demo {
+    font-size: 8px;
+    padding: 10px;
+  }
+  .panel .primary span {
+    padding-left: 10px;
+  }
+  .garage-label {
+    display: none;
+  }
+  .panel .menu-meta {
+    gap: 15px;
+  }
+}
+#objective {
+  background: #0a1428bf;
+  border-left: 2px solid #e8cf9a;
+  padding: 8px 10px;
+}
+#notice:empty {
+  display: none;
+}
+#notice:not(:empty) {
+  background: #08152899;
+  padding: 9px 14px;
+  width: max-content;
+  max-width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  border-bottom: 1px solid #96f5dc44;
+}
+footer a {
+  font: 10px Arial;
+  color: #b5c8d8;
+}
+footer a:hover {
+  color: #96f5dc;
+}
+.tools button {
+  min-height: 40px;
+  min-width: 40px;
+}
+@media (max-width: 700px) {
+  footer a {
+    font-size: 9px;
+  }
+  .tools {
+    gap: 4px;
+  }
+}
+
+.challenge-select {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 0 0 12px;
+  max-width: 420px;
+}
+.challenge-select label {
+  font: 8px monospace;
+  letter-spacing: 1px;
+  color: #9db4c9;
+  white-space: nowrap;
+}
+.challenge-select select {
+  font: 11px Arial;
+  color: #e5faf5;
+  background: #102132;
+  border: 1px solid #567581;
+  min-height: 40px;
+  padding: 8px 10px;
+  border-radius: 0;
+  min-width: 0;
+  flex: 1;
+}
+.challenge-select select:focus-visible {
+  outline: 2px solid #96f5dc;
+  outline-offset: 3px;
+}
+#draft-hud {
+  position: fixed;
+  left: 50%;
+  bottom: 120px;
+  transform: translateX(-50%);
+  width: 270px;
+  padding: 12px;
+  background: #09172cda;
+  border: 1px solid #5d859555;
+  color: #acc7d7;
+}
+#draft-hud small {
+  font: 9px monospace;
+  letter-spacing: 0.7px;
+}
+.draft-track {
+  height: 3px;
+  margin-top: 9px;
+  background: #53718255;
+}
+.draft-track i {
+  display: block;
+  height: 100%;
+  background: #96f5dc;
+  width: 0;
+}
+#draft-hud.ready {
+  border-color: #96f5dc;
+  color: #96f5dc;
+  background: #102b34ed;
+}
+#medal-shelf {
+  line-height: 1.6;
+  max-width: 170px;
+  color: #a9d6cd;
+}
+@media (max-width: 700px) {
+  .challenge-select {
+    margin-bottom: 9px;
+  }
+  .challenge-select select {
+    font-size: 10px;
+    min-height: 38px;
+  }
+  .panel .intro {
+    margin: 12px 0;
+  }
+  .panel h1 {
+    margin: 14px 0;
+  }
+  #draft-hud {
+    bottom: 190px;
+    left: 6%;
+    transform: none;
+    width: 230px;
+    padding: 8px;
+  }
+  #draft-hud small {
+    font-size: 8px;
+  }
+}
+@media (max-height: 520px) and (min-width: 650px) {
+  .panel .challenge-select {
+    grid-column: 2;
+    margin: 0;
+  }
+  .panel {
+    top: 67px;
+    gap: 6px 30px;
+  }
+  .panel .start-hint {
+    display: none;
+  }
+  #draft-hud {
+    bottom: 65px;
+    padding: 8px;
+    width: 240px;
+  }
+}
+@media (max-width: 700px) {
+  #draft-hud {
+    width: 52%;
+    max-width: 210px;
+  }
+  #draft-hud small {
+    font-size: 7px;
+    letter-spacing: 0.2px;
+  }
+  .speed {
+    left: auto;
+    right: 6%;
+    bottom: 190px;
+    gap: 5px;
+  }
+  .speed strong {
+    font-size: 36px;
+  }
+  .speed span {
+    font-size: 8px;
+  }
+}

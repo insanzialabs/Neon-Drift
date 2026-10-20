@@ -15,3 +15,10 @@ Three.js is a software dependency distributed under the MIT license; see `node_m
 ## User-supplied soundtrack
 
 `Formula 1 — Hans Zimmer (OST F1 Movie) ｜ Live by Imperial Orchestra [YxzIwX5g_eY].webm` was supplied locally by the user and integrated at their request. Artist/title information comes from the filename; the recording and mix authorship have not been independently verified. The file is unchanged. No source URL, license, or redistribution permission was provided or verified. It is not original project audio or claimed to be CC0. The production build copies this recording into its local assets.
+
+## Upgrade assets
+
+No external visual or recorded audio assets were downloaded. Armor/goal/boost feedback extends original synthesis. Social preview is captured from real gameplay; it does not change the rights status of the user-supplied soundtrack. Procedural car/city assets remain original.
+
+## Skill expansion assets
+Slipstream wake geometry, vehicle paint variants, dash outlines, aura/trail colors and all new skill/finish sounds are original code-generated additions. No new downloaded art, music, font or sprite assets were introduced. Existing asset terms above still apply.

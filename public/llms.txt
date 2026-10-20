@@ -1,0 +1,12 @@
+# Neon Drift — Afterhours Run
+
+Play Neon Drift, a free 3D browser highway racer. Dodge traffic, earn close-call multipliers, collect ion cells and beat your best. Keyboard and touch controls.
+
+Official project URL: https://neon-drift.insanzialabs.com/
+Studio collection: https://insanzialabs.com/experiments
+
+## How to play
+Arrow keys or A/D steer; touch buttons or swipes also steer. Hold Space/Boost to spend energy. Close passes earn a multiplier capped at 5. One armor charge absorbs a collision; three ion cells repair it. Arcade and slower Cruise track separate bests. P pauses, R retries. Showcase is autopilot and never saves a record.
+
+## Skill expansion
+Slipstream: follow traffic for one second, then change lanes to release a two-second free surge. Midnight Sprint: finish 60 seconds; medals at 6000/10000/14000 points. Records are local, separate by pace. Showcase runs never earn records, badges or cosmetics. No online leaderboard.

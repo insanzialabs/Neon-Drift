@@ -30,7 +30,7 @@ try {
   await page.locator("#pause").click();
   await page.locator("#home").click();
   await page.locator("#start").click();
-  await page.waitForTimeout(13000);
+  await page.locator("#overlay").waitFor({ state: "visible", timeout: 45000 });
   if (!(await page.locator("#overlay").isVisible()))
     throw Error("Expected natural crash");
   await page.screenshot({ path: "qa/crash.png" });

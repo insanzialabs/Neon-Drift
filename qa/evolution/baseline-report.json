@@ -1,0 +1,22 @@
+{
+  "game": "games/neon-drift",
+  "errors": [],
+  "checks": [
+    "accessible how-to-play dialog",
+    "pace selection without accidental start",
+    "pause freezes score; keyboard modal focus and resume work",
+    "natural collision ends run; R retries",
+    "showcase uses normal physics and does not save bests",
+    "320px portrait and short landscape menus; visible mobile controls",
+    "reduced-motion menu loads",
+    "WebGL context loss explanation",
+    "local discovery and brand assets return 200",
+    "VideoGame metadata"
+  ],
+  "observedHeadlessDesktopFPS": 60,
+  "limits": [
+    "not a physical phone test",
+    "speaker output and sustained GPU thermals not measured",
+    "search indexing and media licensing not verified"
+  ]
+}

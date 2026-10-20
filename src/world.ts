@@ -7,6 +7,16 @@ export class World {
   camera = new T.PerspectiveCamera(57, 1, 0.1, 750);
   renderer: T.WebGLRenderer;
   hero = car(0xb5c8ce);
+  wake = new T.Mesh(
+    new T.PlaneGeometry(1.9, 10),
+    new T.MeshBasicMaterial({
+      color: 0x96f5dc,
+      transparent: true,
+      opacity: 0.15,
+      side: T.DoubleSide,
+      depthWrite: false,
+    }),
+  );
   chunks: T.Group[] = [];
   cars: T.Group[] = [];
   stars: T.Points;
@@ -17,6 +27,7 @@ export class World {
   sparkTime = 0;
   sparkX = 0;
   sparks: T.Points;
+  underglow: T.PointLight;
   low = false;
   reduced = matchMedia("(prefers-reduced-motion: reduce)").matches;
   constructor(container: HTMLElement) {
@@ -38,9 +49,13 @@ export class World {
     this.scene.add(key);
     this.scene.add(this.hero);
     this.hero.position.set(0, 0, 3);
+    this.wake.rotation.x = -Math.PI / 2;
+    this.wake.position.set(0, 0.1, -4);
+    this.scene.add(this.wake);
     const glow = new T.PointLight(0x12bdff, 35, 16, 2);
     glow.position.set(0, 1, 3);
     this.scene.add(glow);
+    this.underglow = glow;
     const moon = new T.Mesh(
       new T.CircleGeometry(29, 64),
       new T.MeshBasicMaterial({ color: 0xaaa0b8 }),
@@ -384,6 +399,18 @@ export class World {
     this.renderer.setPixelRatio(Math.min(devicePixelRatio, low ? 1 : 1.75));
     this.rain.visible = !low;
   }
+  setLivery(value: string) {
+    const color =
+      value === "ion" ? 0x65dfbd : value === "solar" ? 0xe9b955 : 0xb5c8ce;
+    this.hero.traverse((o) => {
+      if (
+        o instanceof T.Mesh &&
+        o.material instanceof T.MeshStandardMaterial &&
+        o.material.name === "vehicle-paint"
+      )
+        o.material.color.setHex(color);
+    });
+  }
   update(run: Run, dt: number, time: number) {
     const distance =
       run.phase === "menu"
@@ -401,7 +428,18 @@ export class World {
       g.userData.tunnel.visible = run.phase !== "menu" && beat === 1;
       g.userData.bridge.visible = run.phase !== "menu" && beat === 2;
     }
+    this.wake.visible =
+      run.phase === "playing" &&
+      (run.draft > 0 || run.draftReady || run.surge > 0);
+    this.wake.position.x = run.x;
+    this.wake.scale.x =
+      run.draftReady || run.surge > 0 ? 1.2 : Math.max(0.15, run.draft);
+    this.underglow.color.setHex(
+      run.surge > 0 ? 0xffce76 : run.draftReady ? 0x96f5dc : 0x12bdff,
+    );
     this.hero.position.x = run.x;
+    this.underglow.position.x = run.x;
+    this.hero.visible = true; // Recovery uses HUD/sparks, never high-frequency flashing.
     this.hero.rotation.z = -(run.lane * 4.2 - 4.2 - run.x) * 0.045;
     this.hero.rotation.y = (run.lane * 4.2 - 4.2 - run.x) * 0.045;
     if (run.phase === "menu") {

@@ -2,6 +2,9 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <link rel="icon" type="image/png" href="/favicon.png" />
+    <link rel="icon" href="/favicon.ico" sizes="any" />
+    <link rel="apple-touch-icon" href="/favicon.png" />
     <meta
       name="viewport"
       content="width=device-width, initial-scale=1, viewport-fit=cover"
@@ -9,13 +12,206 @@
     <meta name="theme-color" content="#070917" />
     <meta
       name="description"
-      content="An original neon-soaked 3D arcade highway runner. Chase the afterhours."
+      content="Play Neon Drift, a free 3D highway racer. Bank slipstream surges, dodge traffic and chase medals in Midnight Sprint. Endless racing, keyboard and touch controls."
     />
-    <title>Neon Drift — Afterhours Run</title>
+    <title>Neon Drift — Afterhours Run | Insanzia Labs</title>
+
+    <link rel="canonical" href="https://neon-drift.insanzialabs.com/" />
+    <meta name="robots" content="index,follow,max-image-preview:large" />
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:title"
+      content="Neon Drift — Afterhours Run | Insanzia Labs"
+    />
+    <meta
+      property="og:description"
+      content="Play Neon Drift, a free 3D highway racer. Bank slipstream surges, dodge traffic and chase medals in Midnight Sprint. Endless racing, keyboard and touch controls."
+    />
+    <meta property="og:url" content="https://neon-drift.insanzialabs.com/" />
+    <meta
+      property="og:image"
+      content="https://neon-drift.insanzialabs.com/og-image.webp"
+    />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta
+      property="og:image:alt"
+      content="Neon Drift — Afterhours Run gameplay on a laptop"
+    />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="Neon Drift — Afterhours Run | Insanzia Labs"
+    />
+    <meta
+      name="twitter:description"
+      content="Play Neon Drift, a free 3D highway racer. Bank slipstream surges, dodge traffic and chase medals in Midnight Sprint. Endless racing, keyboard and touch controls."
+    />
+    <meta
+      name="twitter:image"
+      content="https://neon-drift.insanzialabs.com/og-image.webp"
+    />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "VideoGame",
+        "name": "Neon Drift — Afterhours Run",
+        "url": "https://neon-drift.insanzialabs.com/",
+        "description": "Play Neon Drift, a free 3D highway racer. Bank slipstream surges, dodge traffic and chase medals in Midnight Sprint. Endless racing, keyboard and touch controls.",
+        "image": "https://neon-drift.insanzialabs.com/og-image.webp",
+        "genre": "Racing",
+        "gamePlatform": "Web browser",
+        "applicationCategory": "GameApplication",
+        "operatingSystem": "Any with a modern browser",
+        "inLanguage": "en",
+        "isAccessibleForFree": true,
+        "playMode": "SinglePlayer",
+        "creator": {
+          "@type": "Organization",
+          "name": "Insanzia Labs",
+          "url": "https://insanzialabs.com"
+        },
+        "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+      }
+    </script>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "@id": "https://neon-drift.insanzialabs.com/#guide",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "How do I play Neon Drift?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Use arrow keys or A/D to change lanes. On touchscreens, use the\n        left/right buttons or swipe the road. Hold Space or Boost to spend\n        earned energy. Release and refill when the reserve runs out."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How do close calls and armor work?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Pass beside traffic to earn near-miss points and energy. A clean pass is\n        counted only after the vehicle clears your car. The multiplier caps at\n        \u00d75. One armor charge saves you from a collision. Collect three ion cells\n        to repair spent armor."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What is Cruise pace?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Cruise gives you more time to react and tracks a separate best score.\n        Both paces have three run goals. P pauses, R retries after a crash.\n        Showcase is labeled autopilot and cannot save records."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What is slipstream?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Follow traffic in the same lane, 20\u201385 metres behind it, for one second to bank a surge. Change lanes to release two seconds of free boost and 400 points. A hit clears the charge. There is no collision protection during a surge."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Midnight Sprint & skill collection",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Finish 60 seconds to earn Bronze at 6,000, Silver at 10,000 or Gold at 14,000 points. Crashing does not award a medal. Records and badges are separate for Arcade and Cruise. Earn Wake rider with 3 surges in one run, Close-call artist with 10 near misses, and Midnight gold with a Gold Sprint. Showcase never saves rewards."
+            }
+          }
+        ]
+      }
+    </script>
   </head>
   <body>
-    <div id="app"><div role="status" style="position:fixed;inset:0;display:grid;place-items:center;background:#080b1c;color:#96f5dc;font:12px monospace;letter-spacing:3px">INITIALIZING THE NIGHT…</div></div>
-    <noscript><p style="position:fixed;inset:0;padding:15vh 10vw;background:#080b1c;color:#edf4f5;font:18px sans-serif">Neon Drift requires JavaScript and WebGL to render the city. Enable JavaScript, then reload to race.</p></noscript>
+    <div id="app">
+      <div
+        role="status"
+        style="
+          position: fixed;
+          inset: 0;
+          display: grid;
+          place-items: center;
+          background: #080b1c;
+          color: #96f5dc;
+          font: 12px monospace;
+          letter-spacing: 3px;
+        "
+      >
+        INITIALIZING THE NIGHT…
+      </div>
+    </div>
+    <dialog id="guide" aria-labelledby="guide-title">
+      <h2 id="guide-title">Own the afterhours.</h2>
+      <h3>How do I play Neon Drift?</h3>
+      <p>
+        Use arrow keys or A/D to change lanes. On touchscreens, use the
+        left/right buttons or swipe the road. Hold Space or Boost to spend
+        earned energy. Release and refill when the reserve runs out.
+      </p>
+      <h3>How do close calls and armor work?</h3>
+      <p>
+        Pass beside traffic to earn near-miss points and energy. A clean pass is
+        counted only after the vehicle clears your car. The multiplier caps at
+        ×5. One armor charge saves you from a collision. Collect three ion cells
+        to repair spent armor.
+      </p>
+      <h3>What is Cruise pace?</h3>
+      <p>
+        Cruise gives you more time to react and tracks a separate best score.
+        Both paces have three run goals. P pauses, R retries after a crash.
+        Showcase is labeled autopilot and cannot save records.
+      </p>
+      <p>
+        <a href="https://insanzialabs.com/experiments"
+          >More Insanzia Labs experiments</a
+        >
+      </p>
+      <h3>What is slipstream?</h3>
+      <p>
+        Follow traffic in the same lane, 20–85 metres behind it, for one second
+        to bank a surge. Change lanes to release two seconds of free boost and
+        400 points. A hit clears the charge. There is no collision protection
+        during a surge.
+      </p>
+      <h3>Midnight Sprint &amp; skill collection</h3>
+      <p>
+        Finish 60 seconds to earn Bronze at 6,000, Silver at 10,000 or Gold at
+        14,000 points. Crashing does not award a medal. Records and badges are
+        separate for Arcade and Cruise. Earn Wake rider with 3 surges in one
+        run, Close-call artist with 10 near misses, and Midnight gold with a
+        Gold Sprint. Showcase never saves rewards.
+      </p>
+      <h3>Your earned style</h3>
+      <p id="collection-status"></p>
+      <label for="livery">Vehicle paint</label>
+      <select id="livery">
+        <option value="titanium">Titanium · standard</option>
+        <option value="ion">Ion mint · Wake rider badge</option>
+        <option value="solar">Solar gold · Close-call artist badge</option>
+      </select>
+      <p>
+        Style rewards are cosmetic only. Your collection is stored on this
+        browser.
+      </p>
+      <button id="close-guide">BACK TO THE NIGHT</button>
+    </dialog>
+    <noscript
+      ><p
+        style="
+          position: fixed;
+          inset: 0;
+          padding: 15vh 10vw;
+          background: #080b1c;
+          color: #edf4f5;
+          font: 18px sans-serif;
+        "
+      >
+        Neon Drift requires JavaScript and WebGL to render the city. Enable
+        JavaScript, then reload to race.
+      </p></noscript
+    >
     <script type="module" src="/src/main.ts"></script>
   </body>
 </html>

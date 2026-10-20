@@ -10,3 +10,11 @@ Three truthful hooks:
 For a 20–25 second take: record the garage for 2 seconds; click showcase; keep 5 seconds of skyline traffic; capture the ion tunnel around 7–12 seconds of running; finish with the bridge around 14–20 seconds. Timing varies with frame rate and boost. Record the on-screen sector labels to establish each transition. Avoid removing the showcase label when editing.
 
 Desktop: 1440×900 or 1920×1080, crop carefully around the vehicle while retaining the score. Portrait: 390×844 or 1080×1920 with the whole game visible, including touch controls. Start the recording after browser layout settles. Hide the pointer after clicking. SFX starts only after the start gesture; the supplied WebM starts with gameplay unless MUSIC is off. The supplied recording’s redistribution rights have not been verified. For human play, A/D or arrows steer; hold Space to consume boost; skim during a lane change for close calls. Pause with P before changing capture settings.
+
+Upgrade notes: a normal adjacent-lane pass can now earn a real close call, with a capped ×5 multiplier. Capture an actual armor save and the remaining repair-cell counter for a recovery hook. Cruise is a gentler pace with a separate best; identify the selected mode when comparing scores. The current social image comes from real showcase gameplay rather than a manufactured achievement.
+
+## New skill hooks
+- “Follow the danger. Borrow its speed.” Follow a traffic wake, show the charge, then change lanes to release a free surge.
+- “Sixty seconds to own midnight.” Select Midnight Sprint and record the countdown, near misses and an earned finish.
+- “The paint has a story.” Show the skill collection and a paint unlocked through an actual run. Do not present fixture data or showcase scores as earned achievements.
+For reliable 20-second skill footage, select Sprint then Watch Showcase; keep the AUTOPILOT label visible. For personal medals, play manually and record the real finish.

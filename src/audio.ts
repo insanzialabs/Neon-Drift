@@ -82,18 +82,28 @@ export class Sound {
     if (!this.ctx || this.muted) return;
     const o = this.ctx.createOscillator(),
       g = this.ctx.createGain();
-    o.type = kind === "crash" ? "sawtooth" : "triangle";
+    o.type = ["crash", "damage"].includes(kind) ? "sawtooth" : "triangle";
     o.frequency.setValueAtTime(
-      kind === "crash" ? 130 : 700,
+      ["crash", "damage"].includes(kind)
+        ? 130
+        : ["boost", "surge"].includes(kind)
+          ? 110
+          : ["goal", "finish", "charged"].includes(kind)
+            ? 950
+            : 700,
       this.ctx.currentTime,
     );
     o.frequency.exponentialRampToValueAtTime(
-      kind === "crash" ? 20 : 1400,
+      ["crash", "damage"].includes(kind) ? 20 : ["boost", "surge"].includes(kind) ? 420 : 1400,
       this.ctx.currentTime + 0.25,
     );
     g.gain.setValueAtTime(0.12, this.ctx.currentTime);
     g.gain.exponentialRampToValueAtTime(0.001, this.ctx.currentTime + 0.4);
     o.connect(g).connect(this.ctx.destination);
+    o.onended = () => {
+      o.disconnect();
+      g.disconnect();
+    };
     o.start();
     o.stop(this.ctx.currentTime + 0.4);
   }

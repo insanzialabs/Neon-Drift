@@ -35,6 +35,7 @@ export function car(color = 0xb8c6c8, truck = false) {
       roughness: 0.12,
       emissive: 0x062331,
     });
+  paint.name = "vehicle-paint";
   if (truck) {
     box(g, 2.35, 2.8, 5.9, 0, 1.9, 0, dark);
     box(g, 2.25, 1.9, 1.9, 0, 1.45, -3.1, paint);
